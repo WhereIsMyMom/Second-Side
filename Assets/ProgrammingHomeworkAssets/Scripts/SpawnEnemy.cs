@@ -20,7 +20,7 @@ public class SpawnEnemy : MonoBehaviour
     private void Update()
     {
         EnemySpawnTimer();
-        EnemySpawn();
+       // EnemySpawn();
     }
 
 
