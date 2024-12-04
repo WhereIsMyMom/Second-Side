@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class EnemyWaypoints : MonoBehaviour
 {
+    public float speed = 5;
     public Transform[] patrolPoints;
-    private int partolIndex = 0;
+    private int patrolIndex = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,16 @@ public class EnemyWaypoints : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform
+        transform.position = Vector2.MoveTowards(transform.position, patrolPoints[patrolIndex].position, speed * Time.deltaTime);
+
+        if (transform.position == patrolPoints[patrolIndex].position)
+        {
+            patrolIndex++;
+
+            if (patrolIndex >= patrolPoints.Length)
+            {
+                patrolIndex = 0;
+            }
+        }
     }
 }
