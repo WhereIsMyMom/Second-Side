@@ -11,7 +11,7 @@ public class EnemyWaypoints : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform.position = patrolPoints[0].position;
     }
 
     // Update is called once per frame
