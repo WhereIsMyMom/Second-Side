@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class DestroyEnemy : MonoBehaviour
 {
@@ -13,6 +12,7 @@ public class DestroyEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.tag);
         switch (collision.tag)
         {
             // Coin tag, dicates what happens after player touches coins 
@@ -20,7 +20,7 @@ public class DestroyEnemy : MonoBehaviour
                 {
 
                     // Destroys the coins
-                    Destroy(collision.gameObject);
+                    Destroy(gameObject);
                     break;
                 }
         }
