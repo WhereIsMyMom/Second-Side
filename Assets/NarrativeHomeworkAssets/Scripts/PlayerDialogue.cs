@@ -14,10 +14,8 @@ public class PlayerDialogue : MonoBehaviour
 
     private void Start()
     {
-        _talkText = GameObject.Find(Structs.GameObjects.talkText).GetComponent<TextMeshProUGUI>();
 
-        _talkPanel = GameObject.Find(Structs.GameObjects.talkPanel);
-        _talkPanel.SetActive(false);
+
     }
 
     // Update is called once per frame

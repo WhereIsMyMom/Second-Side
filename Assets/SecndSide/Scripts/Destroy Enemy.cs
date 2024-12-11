@@ -30,6 +30,11 @@ public class DestroyEnemy : MonoBehaviour
                     Destroy(gameObject);
                     break;
                 }
+            case "Bullet":
+                {
+                    Destroy(gameObject);
+                    break;
+                }
         }
     }
 }

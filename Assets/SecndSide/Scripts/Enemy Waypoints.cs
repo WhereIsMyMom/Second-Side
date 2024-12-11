@@ -11,14 +11,13 @@ public class EnemyWaypoints : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = patrolPoints[0].position;
+        transform.position = new Vector3(patrolPoints[0].position.x, patrolPoints[0].position.y, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, patrolPoints[patrolIndex].position, speed * Time.deltaTime);
-
         if (transform.position == patrolPoints[patrolIndex].position)
         {
             patrolIndex++;
