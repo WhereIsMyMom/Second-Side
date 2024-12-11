@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerHP : MonoBehaviour
 {
     public int health = 100;
+    public int Damage = 20;
     public Image heart; 
 
     // Start is called before the first frame update
@@ -18,5 +19,11 @@ public class PlayerHP : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void LowerHP()
+    {
+        health -= Damage;
+        heart.fillAmount = (float)health / (float)100;
     }
 }

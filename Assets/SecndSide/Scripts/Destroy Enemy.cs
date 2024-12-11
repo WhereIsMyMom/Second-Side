@@ -9,11 +9,13 @@ public class DestroyEnemy : MonoBehaviour
     public int health = 100;
     public int Damage = 20; 
     public Image heart;
+    public PlayerHP playerHP;
 
     // Start is called before the first frame update
     void Start()
     {
-        heart = GameObject.Find("Heart").GetComponent<Image>(); 
+        heart = GameObject.Find("Heart").GetComponent<Image>();
+        playerHP = GameObject.Find("GameController").GetComponent<PlayerHP>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,9 +26,8 @@ public class DestroyEnemy : MonoBehaviour
             // Coin tag, dicates what happens after player touches coins 
             case "Destroy":
                 {
-                    health -= Damage;
-                    heart.fillAmount = (float) health / (float) 100;
-                    // Destroys the coins
+                    playerHP.LowerHP();
+                    
                     Destroy(gameObject);
                     break;
                 }
