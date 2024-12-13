@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SecndSide/Scene/Main Menu.unity
     guid: 612174712d6c5904f890addb6fa561a0
-  - enabled: 1
+  - enabled: 0
     path: Assets/SecndSide/Scene/Level Stuff.unity
     guid: 43835f2e07ffbf744b471d21d8714bcf
   - enabled: 1
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SecndSide/Scene/SecondSide 2.unity
     guid: ce61d7191c49aa94895adbf6e37107d5
+  - enabled: 1
+    path: Assets/SecndSide/Scene/EndScene.unity
+    guid: 63bce17a3b0c41b4691bb221b1067ed5
   m_configObjects: {}

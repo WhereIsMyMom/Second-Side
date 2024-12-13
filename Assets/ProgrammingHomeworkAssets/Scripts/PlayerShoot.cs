@@ -8,8 +8,8 @@ public class PlayerShoot : MonoBehaviour
     public Transform bulletSpawn;
 
     // Timer 
-    private const float Timer = 0.5f;
-    private float _currentTime = 0.5f;
+    private const float Timer = 1.5f;
+    private float _currentTime = 1.5f;
     private bool _canShoot = true;
 
     private void Update()

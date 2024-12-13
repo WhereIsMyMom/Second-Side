@@ -36,6 +36,11 @@ public class DestroyEnemy : MonoBehaviour
                     Destroy(gameObject);
                     break;
                 }
+            case "Player":
+                {
+                    playerHP.LowerHP();
+                    break;
+                }
         }
     }
 }
